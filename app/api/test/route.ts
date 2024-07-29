@@ -2,7 +2,7 @@ import connectMongoDB from "@/lib/mongoose";
 import Test from "@/models/test";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function POST() {
+export async function GET() {
   try {
     await connectMongoDB();
     const test = await Test.create({ name: 'Jorge testing' });
